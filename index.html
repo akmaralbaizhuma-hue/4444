@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFK Колледж</title>
+
+<style>
+body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6fb;
+        color: #333;
+      }
+
+      .header {
+        background-color: #003366;
+        color: white;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .nav {
+        background-color: #0055a5;
+        padding: 30px 0;
+        text-align: center;
+      }
+      .nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 60px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      .nav a:hover {
+        color: #ffd700;
+        text-decoration: underline;
+      }
+
+/* HERO */
+
+.hero{
+background:url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1");
+background-size:cover;
+background-position:center;
+height:100px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:rgb(0, 0, 0);
+font-size:35px;
+font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+width:80%;
+margin:auto;
+padding:40px 0;
+}
+
+/* ABOUT */
+.about {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Сол жақтағы фото блок */
+.about-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-photos img {
+  width: 400px; /* фотолардың ені */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Оң жақтағы текст */
+.about-text {
+  flex: 1;
+  font-size: 20px;
+}
+
+/* SPECIALITIES */
+
+.specialities{
+margin-top:50px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card img{
+width:100%;
+border-radius:30px;
+}
+
+/* BUTTON */
+
+.apply-btn{
+margin-top:40px;
+text-align:center;
+}
+
+.apply-btn button{
+padding:15px 30px;
+font-size:18px;
+background:#002b5b;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.apply-btn button:hover{
+background:#00509e;
+}
+
+/* FORM */
+
+#admissionForm{
+display:none;
+background:white;
+padding:30px;
+margin-top:40px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+/* FOOTER */
+
+.footer{
+margin-top:60px;
+background:#002b5b;
+color:white;
+text-align:center;
+padding:20px;
+}
+.group-photo{
+font-size:18px;
+}
+
+
+
+.group-photo img{
+width:400px;
+border-radius:30px;
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+.group-photo p{
+font-size:18px;
+}
+
+</style>
+
+<script>
+
+function showAdmission(){
+document.getElementById("admissionForm").style.display="block";
+}
+
+function submitApplication(){
+
+let name=document.getElementById("name").value;
+let spec=document.getElementById("spec").value;
+let phone=document.getElementById("phone").value;
+
+if(name==""||spec==""||phone==""){
+alert("Барлық өрісті толтырыңыз");
+return;
+}
+
+alert("Өтініш сәтті жіберілді!");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+<h1>AFK Колледжі</h1>
+<p>Алматы финансовый кәсіптік колледжі</p>
+</div>
+
+<div class="nav">
+      <a href="./index.html">Басты бет</a>
+      <a href="./students.html">Студенттер</a>
+      <a href="./teacher.html">Мұғалімдер</a>
+      <a href="./mainweb.html">Колледж</a>
+      <a href="kujattar.html">Қажетті құжаттар</a>
+      <a href="Әкімшілік.html">Әкімшілік</a>
+    </div>
+
+<div class="hero">
+Заманауи IT колледжі
+</div>
+
+<div class="container">
+
+<!-- ABOUT -->
+
+<div class="about">
+<div class="about-photos">
+    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b" alt="Студент 1">
+    <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b" alt="Студент 2">
+   <img src="https://images.unsplash.com/photo-1521790797524-b2497295b8a0" 
+   alt="Студенттер бірге">
+  </div>
+<div class="about-text">
+
+<h2>Біз туралы</h2>
+
+<p>
+AFK колледжі 2005 жылы құрылған. Біз ақпараттық технологиялар
+саласында білікті мамандар дайындаймыз.
+</p>
+
+<p>
+Колледжде заманауи компьютерлік сыныптар,
+тәжірибелік зертханалар және тәжірибелі оқытушылар бар.
+Біздің миссиямыз – студенттерге сапалы білім беру, кәсіби дағдыларын 
+дамыту және шығармашылық әлеуетін ашу.
+</p>
+  <h4>Біздің құндылықтар:</h4>
+<ul>
+<li>Сапалы білім</li>
+<li>Инновация және технологиялар</li>
+<li>Студенттердің дамуы</li>
+<li>Әлеуметтік жауапкершілік</li>
+</ul>
+<h4>Миссия:</h4>
+<p>Студенттердің кәсіби және шығармашылық дамуына жағдай жасап, заманауи IT мамандарын даярлау.</p>
+
+<h4>Визия:</h4>
+<p>Қазақстанның жетекші IT колледжі болу және халықаралық деңгейде танылу.</p>
+
+<h4>Қызметтеріміз:</h4>
+<ul>
+<li>Бағдарламалау, Web технологиялар, деректер базасы курстары</li>
+<li>IT олимпиадаларға қатысу мүмкіндігі</li>
+<li>Сертификаттау және халықаралық стандарттарға сай білім</li>
+<li>Стажировка және кәсіптік практика</li>
+</ul>
+
+</div>
+
+</div>
+
+ 
+</div>
+<!-- SPECIALITIES -->
+
+<h2 style="margin-top:60px">Біздің мамандықтар</h2>
+
+<div class="specialities">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+<h3>Бағдарламалау</h3>
+<p>Python, Java, Web Development</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c">
+<h3>Web технологиялар</h3>
+<p>HTML, CSS, JavaScript</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+<h3>Деректер базасы</h3>
+<p>MySQL, PostgreSQL</p>
+</div>
+
+</div>
+
+<div class="apply-btn">
+<button onclick="showAdmission()">Колледжге түсу</button>
+<a href="login.html">
+  <button>Шығу</button>
+</a>
+</div>
+
+<!-- FORM -->
+
+<div id="admissionForm">
+
+<h2>Қабылдау формасы</h2>
+
+<input id="name" type="text" placeholder="Аты-жөні">
+
+<input id="spec" type="text" placeholder="Мамандық">
+
+<input id="phone" type="text" placeholder="Телефон">
+
+<button onclick="submitApplication()">Жіберу</button>
+
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 AFK колледжі | Барлық құқықтар қорғалған
+</div>
+
+</body>
+</html>

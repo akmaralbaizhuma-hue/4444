@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Жүйеге кіру</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial;
+        background: #f2f4f8;
+      }
+
+      .header {
+        background: #003366;
+        color: white;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .container {
+        width: 20%;
+        margin: 30px auto;
+        background: white;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      button {
+        padding: 8px 15px;
+        background: #003366;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 5px;
+      }
+
+      button:hover {
+        background: #0055a5;
+      }
+
+      input,
+      select {
+        padding: 8px;
+        margin: 5px 0;
+        width: 100%;
+      }
+
+      .nav {
+        background: #0055a5;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .nav button {
+        background: white;
+        color: #003366;
+        margin: 0 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .student-card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2>AFK колледжі</h2>
+      <p>Студенттерді басқару ақпараттық жүйесі</p>
+
+    </div>
+    <div class="container">
+      <!-- LOGIN -->
+      <div id="loginPage">
+        <h3>Жүйеге кіру</h3>
+
+        <select id="role">
+          <option value="admin">Админ</option>
+          <option value="student">Студент</option>
+          <option value="applicant">Абитуриент</option>
+        </select>
+  
+
+      <input type="text" id="username" placeholder="Логин" />
+      <input type="password" id="password" placeholder="Пароль" />
+
+      <button onclick="login()">Кіру</button>
+
+      <p class="error" id="error"></p>
+    </div>
+
+    <script>
+      function login() {
+       
+        const role = document.getElementById("role").value;
+        const user = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+        const errorMsg = document.getElementById("error");
+
+        // Логин мен пароль
+        if (user === "admin" && pass === "2020") {
+          window.location.href = "index.html";
+        } else {
+          document.getElementById("error").innerText =
+            "";
+        }
+        if (user === "student" && pass === "2020") {
+          window.location.href = "maksim.html";
+        } else {
+          document.getElementById("error").innerText =
+            "";
+        }
+          if (user === "tulek" && pass === "2020") {
+          window.location.href = "o nas.html";
+        } else {
+          document.getElementById("error").innerText =
+            "";
+        }
+      }
+    </script>
+  </body>
+</html>

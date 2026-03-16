@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студенттер тізімі | AFK колледжі</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6fb;
+        color: #333;
+      }
+
+      .header {
+        background-color: #003366;
+        color: white;
+        padding: 50px;
+        text-align: center;
+      }
+
+      .nav {
+        background-color: #0055a5;
+        padding: 30px 0;
+        text-align: center;
+      }
+      .nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 60px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s;
+      }
+      .nav a:hover {
+        color: #ffd700;
+        text-decoration: underline;
+      }
+
+      .page-title {
+        text-align: center;
+        margin: 40px 0 20px;
+        font-size: 32px;
+        color: #003366;
+      }
+
+      .search-box {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .search-box input,
+      .search-box select {
+        padding: 10px;
+        font-size: 16px;
+        margin: 0 5px;
+      }
+
+      .details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding-bottom: 50px;
+      }
+
+      details {
+        width: 90%;
+        max-width: 800px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
+      details:hover {
+        transform: translateY(-3px);
+      }
+      summary {
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+        background: #e6f0ff;
+        border-bottom: 1px solid #333333;
+      }
+
+      details ul {
+        list-style: none;
+        padding: 15px 30px;
+        margin: 0;
+      }
+      details ul li {
+        padding: 6px 0;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 18px;
+      }
+      details ul li a {
+        text-decoration: none;
+        color: #003366;
+        transition: 0.3s;
+      }
+      details ul li a:hover {
+        color: #0055a5;
+        text-decoration: underline;
+      }
+
+      .footer {
+        background: #002b5c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 105px;
+      }
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+      }
+      .popup h3 {
+        margin-top: 0;
+      }
+      .popup .close-btn {
+        display: block;
+        text-align: right;
+        font-weight: bold;
+        cursor: pointer;
+        color: #003366;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2>AFK колледжі</h2>
+      <p>Студенттердің ақпараттық жүйесі</p>
+    </div>
+
+    <div class="nav">
+      <a href="./index.html">Басты бет</a>
+      <a href="./students.html">Студенттер</a>
+      <a href="./teacher.html">Мұғалімдер</a>
+      <a href="./mainweb.html">Колледж</a>
+      <a href="kujattar.html">Құжаттар</a>
+      <a href="Әкімшілік.html">Әкімшілік</a>
+    </div>
+
+    <h1 class="page-title">Студенттер тізімі</h1>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Студенттің атын енгізіңіз..."
+        onkeyup="filterStudents()"
+      />
+      <select id="courseFilter" onchange="filterStudents()">
+        <option value="all">Барлық курстар</option>
+        <option value="1 курс">1 курс</option>
+        <option value="2 курс">2 курс</option>
+        <option value="3 курс">3 курс</option>
+        <option value="4 курс">4 курс</option>
+      </select>
+    </div>
+
+    <div class="details-container" id="studentContainer">
+      <!-- 1 КУРС -->
+      <details data-course="1 курс">
+        <summary>1 курс</summary>
+        <details>
+          <summary>Бағдарламалауды қамтамасыздандыру</summary>
+          <ul>
+            <li>
+              <a href="./srudent.prof.html">Байжума Акмарал</a>
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Айбек Нұрланұлы')"
+                >Нұрланұлы Айбек</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Аружан Ерланқызы')"
+                >Аружан Ерланқызы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Данияр Сейтқазы')"
+                >Данияр Сейтқазы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Мадина Төлегенқызы')"
+                >Мадина Төлегенқызы</a
+              >
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Ақпараттық технологиялар</summary>
+          <ul>
+            <li>
+              <a href="#" onclick="showProfile('Нұрсұлтан Қайратұлы')"
+                >Нұрсұлтан Қайратұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Әлия Жандосқызы')"
+                >Әлия Жандосқызы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Темірлан Бекзатұлы')"
+                >Темірлан Бекзатұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Камила Әділханқызы')"
+                >Камила Әділханқызы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Арман Сәбитұлы')"
+                >Арман Сәбитұлы</a
+              >
+            </li>
+          </ul>
+        </details>
+      </details>
+
+      <!-- 2 КУРС -->
+      <details data-course="2 курс">
+        <summary>2 курс</summary>
+        <details>
+          <summary>Маркетинг</summary>
+          <ul>
+            <li>
+              <a href="#" onclick="showProfile('Жансая Мұратқызы')"
+                >Жансая Мұратқызы</a
+              >
+            </li>
+            <li>
+              <a href="./erasyl.html">Ерасыл Мақсатұлы</a>
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Айдана Нұрболқызы')"
+                >Айдана Нұрболқызы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Бекжан Талғатұлы')"
+                >Бекжан Талғатұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Диана Русланқызы')"
+                >Диана Русланқызы</a
+              >
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Аспазшы</summary>
+          <ul>
+            <li>
+              <a href="#" onclick="showProfile('Әлішер Саматұлы')"
+                >Әлішер Саматұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Меруерт Болатқызы')"
+                >Меруерт Болатқызы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Нұрдәулет Еркінұлы')"
+                >Нұрдәулет Еркінұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Айсұлтан Әбілқайырұлы')"
+                >Айсұлтан Әбілқайырұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Аружан Дәуренқызы')"
+                >Аружан Дәуренқызы</a
+              >
+            </li>
+          </ul>
+        </details>
+      </details>
+
+      <!-- 3 КУРС -->
+      <details data-course="3 курс">
+        <summary>3 курс</summary>
+        <details>
+          <summary>Банк істері</summary>
+          <ul>
+            <li>
+              <a href="./maksim.html">Максим Волков</a>
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Ольга Федорова')"
+                >Ольга Федорова</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Артем Васильев')"
+                >Артем Васильев</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Дарья Николаева')"
+                >Дарья Николаева</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Руслан Абдыкадыров')"
+                >Руслан Абдыкадыров</a
+              >
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Экономика және қаржы</summary>
+          <ul>
+            <li>
+              <a href="#" onclick="showProfile('Азамат Садыков')"
+                >Азамат Садыков</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Ксения Лебедева')"
+                >Ксения Лебедева</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Тимур Беков')">Тимур Беков</a>
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('София Михайлова')"
+                >София Михайлова</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Роман Егоров')">Роман Егоров</a>
+            </li>
+          </ul>
+        </details>
+      </details>
+
+      <!-- 4 КУРС -->
+      <details data-course="4 курс">
+        <summary>4 курс</summary>
+        <details>
+          <summary>Химиялық инженерия және биотехнология</summary>
+          <ul>
+            <li>
+              <a href="./aigerim.html">Айгерим Сейтқазы</a>
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Нұржан Бекмұрат')"
+                >Нұржан Бекмұрат</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Мадина Тұрсын')"
+                >Мадина Тұрсын</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Азамат Қуандық')"
+                >Азамат Қуандық</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Аружан Мұратқызы')"
+                >Аружан Мұратқызы</a
+              >
+            </li>
+          </ul>
+        </details>
+        <details>
+          <summary>Филология</summary>
+          <ul>
+            <li>
+              <a href="#" onclick="showProfile('Данияр Ерболатұлы')"
+                >Данияр Ерболатұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Камила Жанболатқызы')"
+                >Камила Жанболатқызы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Нұрсұлтан Сейітұлы')"
+                >Нұрсұлтан Сейітұлы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Жансая Әбдірахманқызы')"
+                >Жансая Әбдірахманқызы</a
+              >
+            </li>
+            <li>
+              <a href="#" onclick="showProfile('Темірлан Қайратұлы')"
+                >Темірлан Қайратұлы</a
+              >
+            </li>
+          </ul>
+        </details>
+      </details>
+    </div>
+
+    <div class="popup" id="profilePopup">
+      <span class="close-btn" onclick="closePopup()">✖</span>
+      <h3 id="popupName"></h3>
+      <p>Бұл студенттің толық профайлы осы жерде көрсетіледі.</p>
+    </div>
+
+    <div class="footer">© 2026 AFK Колледж | Барлық құқықтар қорғалған</div>
+
+    <script>
+      function showProfile(name) {
+        document.getElementById("popupName").innerText = name;
+        document.getElementById("profilePopup").style.display = "block";
+      }
+      function closePopup() {
+        document.getElementById("profilePopup").style.display = "none";
+      }
+      function filterStudents() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let course = document.getElementById("courseFilter").value;
+        let containers = document.querySelectorAll(
+          "#studentContainer > details",
+        );
+        containers.forEach((courseDetail) => {
+          let courseMatch =
+            course === "all" || courseDetail.dataset.course === course;
+          if (courseMatch) {
+            let showCourse = false;
+            courseDetail.querySelectorAll("li a").forEach((a) => {
+              if (a.textContent.toLowerCase().includes(input)) {
+                a.parentElement.style.display = "";
+                showCourse = true;
+              } else {
+                a.parentElement.style.display = "none";
+              }
+            });
+            courseDetail.style.display = showCourse ? "" : "none";
+          } else {
+            courseDetail.style.display = "none";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="kk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Әкімшілік кабинеті</title>
+  <body>
+      <div class="header">
+      <h2>AFK колледжі</h2>
+      <p>Студенттердің ақпараттық жүйесі</p>
+     
+    </div>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6fb;
+      }
+
+      /* LAYOUT */
+
+      .container {
+        display: flex;
+      }
+
+      /* SIDEBAR */
+
+      .sidebar {
+        width: 230px;
+        background: #002b5c;
+        height: 100vh;
+        color: white;
+        padding-top: 30px;
+      }
+
+      .sidebar h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        transition: 0.3s;
+      }
+
+      .sidebar a:hover {
+        background: #004080;
+      }
+
+      /* MAIN */
+
+      .main {
+        flex: 1;
+      }
+
+      /* TOPBAR */
+
+      .topbar {
+        background: white;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /* CARDS */
+
+      .cards {
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        flex: 1;
+        min-width: 200px;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .card h3 {
+        margin: 0;
+        color: #003366;
+      }
+
+      /* TABLE */
+
+      .table-container {
+        padding: 30px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      th,
+      td {
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+      }
+
+      th {
+        background: #003366;
+        color: white;
+      }
+
+    
+
+      .btn {
+        padding: 6px 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .edit {
+        background: #2196f3;
+        color: white;
+      }
+
+      .delete {
+        background: red;
+        color: white;
+      }
+
+      .logout {
+        background: #ff4d4d;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+    </style>
+    <style> body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f4f8;
+      }
+
+      .header {
+        background-color: #003366;
+        color: white;
+        padding: 50px;
+        text-align: center;
+      }
+
+ 
+      .nav {
+        background-color: #0055a5;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 60px;
+        font-weight: bold;
+         font-size: 16px;
+      }
+
+      .nav a:hover {
+        text-decoration: underline;
+      }
+      .footer {
+        background: #002b5c;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+      }
+</style>
+  </head>
+
+  <body>
+ <div class="nav">
+      <a href="./index.html">Басты бет</a>
+      <a href="./students.html">Студенттер</a>
+      <a href="./teacher.html">Мұғалімдер</a>
+      <a href="./mainweb.html">Колледж</a>
+      <a href="kujattar.html">Қажетті құжаттар</a>
+       <a href="Әкімшілік.html">Әкімшілік</a>
+    </div>
+      <div class="main">
+        <div class="topbar">
+          <h2>Әкімшілік кабинеті</h2>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Студенттер</h3>
+            <p>245</p>
+          </div>
+
+          <div class="card">
+            <h3>Мұғалімдер</h3>
+            <p>35</p>
+          </div>
+
+          <div class="card">
+            <h3>Өтініштер</h3>
+            <p>18</p>
+          </div>
+
+          <div class="card">
+            <h3>Мамандықтар</h3>
+            <p>6</p>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <h2>Соңғы студенттер</h2>
+
+          <table>
+            <tr>
+              <th>Аты-жөні</th>
+              <th>Мамандығы</th>
+              <th>Курс</th>
+              <th>Әрекет</th>
+            </tr>
+
+            <tr>
+              <td>Айбек Нұрлан</td>
+              <td>Бағдарламалау</td>
+              <td>2</td>
+              <td>
+                <button class="btn edit">Өзгерту</button>
+                <button class="btn delete">Өшіру</button>
+              </td>
+            </tr>
+
+            <tr>
+              <td>Алина Серік</td>
+              <td>Дизайн</td>
+              <td>1</td>
+              <td>
+                <button class="btn edit">Өзгерту</button>
+                <button class="btn delete">Өшіру</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function logout() {
+        localStorage.removeItem("auth");
+        window.location.href = "login.html";
+      }
+    </script>
+    <div class="footer">© 2026 AFK Колледж | Барлық құқықтар қорғалған</div>
+  </body>
+</html>
+```
